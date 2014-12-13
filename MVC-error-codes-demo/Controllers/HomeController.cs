@@ -12,5 +12,11 @@ namespace MVC_error_codes_demo.Controllers
         {
             return View();
         }
+
+        [Authorize]
+        public ActionResult Secret()
+        {
+            return View();
+        }
     }
 }

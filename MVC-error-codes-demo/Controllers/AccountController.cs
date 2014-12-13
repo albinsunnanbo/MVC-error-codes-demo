@@ -15,6 +15,14 @@ namespace MVC_error_codes_demo.Controllers
     public class AccountController : Controller
     {
         //
+        // GET: /Account/UnAuthorized
+        [AllowAnonymous]
+        public ActionResult NotAuthorized(string returnUrl)
+        {
+            return View(model: returnUrl);
+        }
+
+        //
         // GET: /Account/Login
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)

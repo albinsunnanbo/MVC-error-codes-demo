@@ -19,7 +19,7 @@ namespace MVC_error_codes_demo
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
-                LoginPath = new PathString("/Account/Login"),
+                LoginPath = new PathString("/Account/NotAuthorized"),
                 Provider = new CookieAuthenticationProvider(),
             });
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
